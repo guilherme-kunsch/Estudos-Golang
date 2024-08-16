@@ -3,8 +3,9 @@ package main
 import "fmt"
 
 func recuperarExecucao() {
-	fmt.Println("Tentativa de recuperar execução!")
-	recover()
+	if r := recover(); r != nil {
+		fmt.Println("Execução recuperada com sucesso!")
+	}
 }
 
 func mediaAluno(n1, n2 float32) bool {
