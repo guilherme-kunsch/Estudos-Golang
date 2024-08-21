@@ -13,7 +13,7 @@ func (r retangulo) area() float64 {
 }
 
 func (c circulo) area() float64 {
-	return math.Pi * (c.raio * c.raio)
+	return math.Pi * math.Pow(c.raio, 2)
 }
 
 // criando interface
