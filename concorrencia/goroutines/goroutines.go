@@ -6,6 +6,7 @@ import (
 )
 
 func main() {
+	//goroutines são funções ou métodos executados em concorrência
 	go escrever("Olá mundo") //goroutine
 	escrever("frase dois")
 }
