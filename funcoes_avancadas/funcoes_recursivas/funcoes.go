@@ -2,23 +2,17 @@ package main
 
 import "fmt"
 
-type Pessoa struct {
-	Nome      string
-	Sobrenome string
-	Idade     int
-	Salario   float32
+func fibonacci(posicao uint) uint {
+	if posicao <= 1 {
+		return posicao
+	}
+
+	return fibonacci(posicao-2) + fibonacci(posicao-1)
 }
-
 func main() {
-	var p Pessoa
-	fmt.Println("Qual seu nome: ")
-	fmt.Scanln(&p.Nome)
-	fmt.Println("Qual seu sobrenome: ")
-	fmt.Scanln(&p.Sobrenome)
-	fmt.Println("Qual sua idade: ")
-	fmt.Scanln(&p.Idade)
-	fmt.Println("Qual seu salário: ")
-	fmt.Scanln(&p.Salario)
+	posicao := uint(12)
 
-	fmt.Println(p)
+	for i := uint(1); i <= posicao; i++ {
+		fmt.Println(fibonacci(i))
+	}
 }
