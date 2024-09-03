@@ -15,7 +15,7 @@ func TestDeEndereco(t *testing.T) {
 		{"Rua 124", "Rua"},
 		{"Avenida Beira Mar", "Avenida"},
 		{"Rodovia Beira", "Rodovia"},
-		{"Estrada Golang", "Estrada"},
+		{" Golang", "Estrada"},
 		{"", "Tipo Inválido"},
 		{"Praça 123", "Tipo Inválido"},
 	}

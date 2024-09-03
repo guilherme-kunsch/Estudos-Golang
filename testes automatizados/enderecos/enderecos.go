@@ -6,7 +6,7 @@ import "strings"
 func TipoDeEndereco(endereco string) string {
 	tiposValidos := []string{"rua", "avenida", "estrada", "rodovia"}
 
-	enderecoLetraMinuscula := strings.ToUpper((endereco))
+	enderecoLetraMinuscula := strings.ToLower((endereco))
 
 	primeiraPalavraEndereco := strings.Split(enderecoLetraMinuscula, " ")[0]
 
@@ -19,7 +19,7 @@ func TipoDeEndereco(endereco string) string {
 	}
 
 	if enderecoTemTipoValido {
-		return primeiraPalavraEndereco
+		return strings.Title(primeiraPalavraEndereco)
 	}
 
 	return "Tipo Inválido"
